@@ -1,0 +1,313 @@
+:root {
+    --black: #000000;
+    --rose-pink: #F8326D;
+    --pink: #F57CA0; 
+    --pale-rose: #FFE5EC;
+    --white: #FBFAF8;
+    --gold: #CC8E2A;
+    --cheese-pastel: #FFE9E9
+}
+
+body {
+    margin: 20px;
+    background: #fff;
+    font-family: 'Bricolage Grotesque';
+}
+
+html, body {
+    overflow-x: hidden; 
+}
+
+::selection {
+  background: var(--pale-rose);
+  color: var(--black);
+}
+
+
+/* Sidebar */
+.container-sidebar {
+    position: fixed;
+    width: 280px;     
+    height: 100vh;     
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+img.user{
+    margin: 10px 0 0 0;
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    border: 3px solid var(--pink);
+}
+
+a {
+    color: var(--black);
+    text-decoration: none;
+}
+
+.name{
+    font-size: 20px;
+}
+
+p.role {
+    font-size: 20px;
+}
+
+span.multiple-text {
+    color: var(--pink);
+}
+
+.social-icon i {
+    margin-right: 7px;
+    font-size: 35px;
+    transition: color 0.3s;
+}
+
+.social-icon i:hover {
+    color: var(--gold);
+}
+
+.line {
+    border: none;
+    border-top: 5px solid var(--rose-pink);
+    margin: 25px 0;
+}
+
+.nav {
+    margin-bottom: 15px;
+    font-size: 22px;
+    line-height: 1.8; 
+}
+
+.nav a {
+    display: flex;            
+    align-items: center;      
+    gap: 10px;   
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: var(--pink);
+}
+
+
+/* Container */
+
+.container {
+    flex: 1;
+    margin-left: 280px;  
+    padding: 30px; 
+}
+
+.container h2 {
+    font-size: 32px;
+}
+
+/* about */
+.about p {
+    text-align: justify;
+    line-height: 1.3; 
+}
+
+/* Interest Card */
+.interest-card {
+  display: flex;          
+  gap: 20px;                
+  margin-top: 20px;
+}
+
+.interest-card > div {
+  flex: 1;                  
+  background: #fff;       
+  padding: 20px;        
+  border-radius: 12px;    
+  box-shadow: 0 4px 10px rgba(146, 99, 99, 0.1); 
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.interest-card > div:hover {
+  transform: translateY(-5px);
+  border: 2px solid transparent; 
+  box-shadow: 0 0 7px var(--rose-pink);
+  background-color: var(--cheese-pastel);
+  color: var(--pink);
+  user-select: none;
+}
+
+.interest-card > div:hover p {
+  color: var(--gold);
+}
+
+.interest-card h4 {
+  margin-bottom: 5px;
+}
+
+.desc-card {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Category Card */
+.category-box {
+    display: flex;
+    flex-wrap: wrap;     
+    gap: 10px 5px;      
+    margin-bottom: 20px;
+}
+
+
+.cat-btn {
+  padding: 8px 15px;
+  margin-right: 10px;
+  background: #fff;
+  border: 2px solid var(--pink);
+  font-size: 16px;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  color: var(--black);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.cat-btn.active,
+.cat-btn:hover {
+  background: var(--rose-pink);
+  color: #fff;
+}
+
+/* Project Card */
+.projects {
+    margin: 0 auto;
+}
+
+.projects > p {
+    margin-bottom: 30px;
+}
+
+.project-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-height: 400px;   
+    overflow-y: auto;      
+    padding: 10px 0;   
+}
+
+.project-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; 
+    border-radius: 8px;
+}
+
+.project-box::-webkit-scrollbar {
+    width: 6px;
+}
+.project-box::-webkit-scrollbar-thumb {
+    background: #ccc;
+    -radius: 3px;
+}
+
+.project-card {
+    width: 320px; 
+    text-align: center;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(146, 99, 99, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(226, 82, 142, 0.25);
+}
+
+/* skill card */
+.skill-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.skill-badge {
+    padding: 5px 12px;
+    border-radius: 4px;
+    background: linear-gradient(135deg, #c5b765, #CC8E2A);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    transition: transform 0.2s ease;
+}
+
+.skill-badge:hover {
+    transform: scale(1.1);
+    cursor: default;
+}
+
+/* view project link */
+.link-card {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--rose-pink);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.link-card:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Sidebar */
+@media (max-width: 768px) {
+    .container-sidebar {
+        position: relative;   
+        width: 100%;          
+        height: auto;         
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: none;
+        border-bottom: 5px solid var(--rose-pink);
+    }
+
+    .container {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        font-size: 22px;
+    }
+
+    .profile img.user {
+        width: 100px;
+        height: 100px;
+    }
+
+    .social-icon i {
+        font-size: 28px;
+    }
+
+    .interest-card {
+        flex-direction: column;  
+    }
+
+   .interest-card > div {
+        width: 90%;   
+    }
+
+    .category-box {
+        row-gap: 10px;   
+        column-gap: 2.5px; 
+        justify-content: center;
+    }
+
+    .cat-btn{
+        font-size: 13px;
+    }
+}
